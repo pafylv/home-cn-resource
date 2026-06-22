@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 产品说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f4f6fa;
+      color: #1e2a3a;
+      line-height: 1.7;
+    }
+    .hero {
+      background: linear-gradient(145deg, #0b1a2e 0%, #1f3349 100%);
+      color: #edf2f7;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid rgba(255, 200, 80, 0.4);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .hero p {
+      max-width: 640px;
+      margin: 1.2rem auto 0;
+      font-size: 1.1rem;
+      color: #bccadc;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.8rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: transform 0.1s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+    }
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #16324f;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.01em;
+      border-left: 4px solid #e6b13e;
+      padding-left: 0.9rem;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #2c3e50;
+      margin-bottom: 0.6rem;
+    }
+    .card ul {
+      list-style: none;
+      margin: 0.5rem 0 0;
+    }
+    .card li {
+      padding: 0.2rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .card li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #e6b13e;
+      font-weight: bold;
+    }
+    .highlight-link {
+      color: #b8860b;
+      text-decoration: none;
+      border-bottom: 1px solid #d4a843;
+      transition: all 0.15s;
+      font-weight: 500;
+    }
+    .highlight-link:hover {
+      color: #0b1a2e;
+      border-bottom-color: #0b1a2e;
+    }
+    .notice-box {
+      background: #eef3f9;
+      border-radius: 1rem;
+      padding: 1.8rem 2rem;
+      margin-top: 2rem;
+      border: 1px solid #dce3ec;
+      color: #1f3549;
+    }
+    .notice-box h4 {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #16324f;
+    }
+    .faq-section {
+      margin: 3rem 0 2rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid #d6dfea;
+      padding: 1rem 0;
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #1d334b;
+    }
+    .faq-item p {
+      margin-top: 0.3rem;
+      color: #314c63;
+    }
+    .footnote {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #6a7e97;
+      border-top: 1px solid #ced7e3;
+      padding-top: 2rem;
+    }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid #b8860b;
+      color: #b8860b;
+      background: transparent;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.15s;
+      margin-top: 0.4rem;
+    }
+    .btn-outline:hover {
+      background: #b8860b;
+      color: white;
+    }
+    @media (max-width: 680px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .container {
+        padding: 1.8rem 1rem 3rem;
+      }
+      .card {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>爱游戏 · 产品说明</h1>
+    <p>面向对游戏内容有甄别需求的用户，提供结构化的网站用途概述与使用参考。</p>
+  </section>
+
+  <div class="container">
+
+    <!-- 摘要 -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>网站定位摘要</h3>
+        <p><a href="https://home-cn-i-game.com.cn" class="highlight-link">爱游戏</a> 是一个以游戏资讯、测评及社区讨论为主的内容平台。站内信息覆盖主流平台与独立作品，内容生产以编辑推荐和用户贡献相结合，适合希望系统了解游戏动态、查找作品信息或参与话题的用户。</p>
+        <p>网站不提供游戏下载或安装服务，侧重信息整合与观点交流。</p>
+      </div>
+      <div class="card">
+        <h3>页面主要特点</h3>
+        <ul>
+          <li>每日更新游戏新闻与专题评测，数据源标注清晰</li>
+          <li>用户可对文章评分、收藏、评论，互动机制透明</li>
+          <li>栏目分类清晰：新游预约、评分榜单、攻略笔记、开发访谈</li>
+          <li>移动端适配良好，支持深色模式自动切换</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 使用建议 + 场景 -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>适合的使用场景</h3>
+        <p>当你需要快速判断一款游戏的口碑走向、查看同类型作品的横向对比，或者寻找某个玩法系统的解析时，<a href="https://home-cn-i-game.com.cn" class="highlight-link">爱游戏</a> 的社区内容与编辑文章可作为参考信息源之一。也适合在购买前阅读多角度评价，辅助决策。</p>
+        <p>日常浏览则侧重资讯速览与话题讨论，参与感较强。</p>
+      </div>
+      <div class="card">
+        <h3>使用建议</h3>
+        <p>建议优先阅读带“编辑推荐”标识的深度内容，其数据核实流程相对完整。用户生成内容（UGC）部分则保持思辨态度，参照平台显示的“有用”比例辅助判断。</p>
+        <p>若需要追溯原始信息来源，可留意页面底部参考链接或脚注。网站不设付费墙，但部分功能需注册后使用。</p>
+      </div>
+    </div>
+
+    <!-- 克制的访问说明 -->
+    <div class="notice-box">
+      <h4>可信但克制的说明</h4>
+      <p><a href="https://home-cn-i-game.com.cn" class="highlight-link">爱游戏</a> 是一个面向游戏玩家的中文内容站点，非官方机构或商业发行渠道。平台不存储任何游戏客户端，也不提供破解或修改资源。所有文章、评分、用户评论均不代表网站投资建议或购买保证。</p>
+      <p>访问时请注意：网站内第三方链接、广告位内容与本站观点无关；用户发布内容由发布者自行承担责任。我们建议您在获取游戏信息后，再通过官方商店或授权渠道做最终决定。</p>
+      <p style="margin-top:0.6rem;"><a href="https://home-cn-i-game.com.cn" class="btn-outline">爱游戏</a></p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-section">
+      <h4 style="font-weight:600; font-size:1.2rem; color:#16324f; border-left:4px solid #e6b13e; padding-left:1rem; margin-bottom:1.2rem;">常见问题摘要</h4>
+      <div class="faq-item">
+        <strong>网站内容完全免费吗？</strong>
+        <p>大部分文章与社区功能免费开放。部分高级筛选或历史数据导出功能可能需要注册登录。没有强制订阅。</p>
+      </div>
+      <div class="faq-item">
+        <strong>如何判断一篇评测的时效性？</strong>
+        <p>每篇文章标题下方均显示发布日期与最后编辑时间。评测通常以游戏版本号或测试阶段标注，可据此参考。</p>
+      </div>
+      <div class="faq-item">
+        <strong>能否在站内直接下载游戏？</strong>
+        <p>不能。网站不提供任何游戏文件、安装包或模拟器资源。所有下载链接均指向外部官方商店或授权页面。</p>
+      </div>
+      <div class="faq-item" style="border-bottom: none;">
+        <strong>我可以在自己的文章里引用爱游戏的内容吗？</strong>
+        <p>引用短摘要并注明出处通常被允许。大篇幅转载或商业使用请先通过网站联系方式获取授权。</p>
+      </div>
+    </div>
+
+    <div class="footnote">
+      本页为产品说明页，基于网站公开信息整理。更新于 2025 年。<br>
+      核心描述仅供参考，使用体验可能随网站改版而变化。
+    </div>
+
+  </div>
+</body>
+</html>
