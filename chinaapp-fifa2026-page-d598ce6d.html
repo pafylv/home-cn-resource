@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>世界杯专题 | 再次聚焦绿茵场上</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f7f4f0;
+      font-family: 'Georgia', 'Times New Roman', '宋体', 'SimSun', serif;
+      color: #2e2b27;
+      line-height: 1.75;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 820px;
+      width: 100%;
+      background-color: #fdfcfa;
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+      padding: 2.5rem 2rem 3rem;
+      border-radius: 4px;
+    }
+
+    /* 首页横幅 — 杂志风通栏 */
+    .hero {
+      margin: -2.5rem -2rem 2.5rem;
+      padding: 3.5rem 2rem 2.8rem;
+      background: linear-gradient(145deg, #eae5db 0%, #f0ebe1 100%);
+      text-align: center;
+      border-bottom: 1px solid #dad3c7;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #2f2a24;
+      margin-bottom: 0.45rem;
+    }
+
+    .hero .subtitle {
+      font-size: 1.05rem;
+      color: #6b6257;
+      font-style: italic;
+      border-top: 1px solid #ccc3b6;
+      border-bottom: 1px solid #ccc3b6;
+      display: inline-block;
+      padding: 0.4rem 2rem;
+      letter-spacing: 1px;
+    }
+
+    /* 正文段落排版 */
+    .intro-block {
+      margin-bottom: 2.2rem;
+    }
+
+    .intro-block p {
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+      text-align: justify;
+      word-break: break-word;
+    }
+
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pull-quote {
+      margin: 2rem 0 2.2rem;
+      padding: 1.2rem 1.8rem;
+      background: #f3efe9;
+      border-left: 4px solid #b8ab9a;
+      font-style: normal;
+      font-size: 1.05rem;
+      color: #2d2822;
+      line-height: 1.7;
+      box-shadow: inset 0 0 0 1px #e8e2d8;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .pull-quote strong {
+      font-weight: 600;
+      color: #4f453b;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 2rem;
+      margin: 2.2rem 0 2rem;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #faf8f5;
+      padding: 1.2rem 1.2rem 1.4rem;
+      border: 1px solid #e3dbd0;
+      border-radius: 3px;
+    }
+
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #3d362f;
+      border-bottom: 1px dashed #d4cbbf;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #4b433b;
+      line-height: 1.65;
+    }
+
+    .action-note {
+      background: #ede8e0;
+      padding: 1.6rem 2rem;
+      margin: 2rem 0 1.2rem;
+      border-radius: 3px;
+      font-size: 1rem;
+      border: 1px solid #d9d0c4;
+      text-align: center;
+    }
+
+    .action-note a {
+      color: #3f3a33;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid #c4b7a6;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .action-note a:hover {
+      border-bottom-color: #7f7262;
+      color: #1f1b17;
+    }
+
+    .faq-mini {
+      margin-top: 2.2rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #ddd6cb;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #efe9e1;
+      padding-bottom: 0.6rem;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      cursor: pointer;
+      color: #3a342d;
+      list-style: none;
+      display: inline-block;
+      padding: 0.2rem 0;
+    }
+
+    .faq-mini summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-mini summary::before {
+      content: "▸ ";
+      color: #9b8c7a;
+      font-weight: 300;
+    }
+
+    .faq-mini details[open] summary::before {
+      content: "▾ ";
+    }
+
+    .faq-mini details p {
+      margin: 0.5rem 0 0.3rem 1.6rem;
+      font-size: 0.95rem;
+      color: #4e453c;
+    }
+
+    .site-footer {
+      margin-top: 2.8rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7f7569;
+      border-top: 1px solid #e5ddd2;
+      padding-top: 1.8rem;
+    }
+
+    .site-footer a {
+      color: #5e5549;
+      text-decoration: none;
+      border-bottom: 1px dotted #b9ad9e;
+    }
+
+    .site-footer a:hover {
+      border-bottom-style: solid;
+      color: #2f2a24;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+
+      .page {
+        padding: 1.5rem 1.2rem 2rem;
+      }
+
+      .hero {
+        margin: -1.5rem -1.2rem 1.8rem;
+        padding: 2.2rem 1.2rem 1.8rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero .subtitle {
+        font-size: 0.95rem;
+        padding: 0.3rem 1rem;
+      }
+
+      .feature-grid {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .pull-quote {
+        margin: 1.5rem 0;
+        padding: 1rem 1.2rem;
+      }
+
+      .action-note {
+        padding: 1.2rem 1rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .intro-block p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 首页横幅 -->
+    <header class="hero">
+      <h1>世界杯 · 再次瞩目</h1>
+      <div class="subtitle">收藏此刻，常回来看看</div>
+    </header>
+
+    <!-- 背景说明 + 第一段自然介绍 -->
+    <section class="intro-block">
+      <p>距离上一届世界杯已过去一段时日，但绿茵场上的那些瞬间仍然留在许多人的记忆里。无论是深夜的欢呼，还是和三五好友一起讨论战术的夜晚，足球带来的那种纯粹氛围，总会在不经意间再次浮现。<strong>这或许就是世界杯的独特之处</strong>——它像老朋友一样，每隔几年就会带着新的故事回来。</p>
+      <p>正因如此，我们保留了一个小小的空间，用来存放与世界杯有关的线索、背景和值得反复回味的片段。这里不追求夸张的标题，也不做空洞的承诺，只是希望当你想重新走近那个充满激情与悬念的赛事时，能有一个安静的去处。</p>
+    </section>
+
+    <!-- 引用块 / 提示框 — 带有杂志感 -->
+    <div class="pull-quote">
+      <strong>再次访问 · 收藏 · 持续关注</strong><br>
+      把世界杯的节奏融入日常，而不是只在赛程表上寻找它。收藏这个页面，就像在书架上留出一个位置给最常翻阅的那本杂志。
+    </div>
+
+    <!-- 三段自然介绍 —— 以特点 / 场景形式展开 -->
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>从记忆到当下</h3>
+        <p>每一届世界杯都有属于自己的标志画面。从经典的对决到新星的崛起，这些内容值得被反复阅读。你可以在闲暇时翻开，找回当初看球时的那份专注与期待。</p>
+      </div>
+      <div class="feature-item">
+        <h3>节奏由你决定</h3>
+        <p>不必赶着赛程走。世界杯的魅力有一部分在于赛前的猜想、赛后的回味，以及那些不经意间发现的冷门知识。页面内容会围绕这些维度慢慢积累，像一本不断更新的专题册。</p>
+      </div>
+      <div class="feature-item">
+        <h3>常回来看看</h3>
+        <p>收藏夹里总有几个舍不得删的地址。我们希望这里也能成为其中之一——没有推送打扰，没有浮夸弹窗，只有关于世界杯的平实记录和背景梳理。下次想看的时候，随时回来。</p>
+      </div>
+    </div>
+
+    <!-- 页尾访问提示 —— 自然嵌入 a 标签 -->
+    <div class="action-note">
+      如果你也习惯把一些感兴趣的话题留着慢慢读，不妨把
+      <a href="https://chinaapp-fifa2026.com">世界杯</a>
+      专题页收进书签。它不赶时效，只求在你想了解或重温的时候，总有一些内容等在页面里。
+    </div>
+
+    <!-- FAQ 摘要 → 轻量问答风格 -->
+    <div class="faq-mini">
+      <details>
+        <summary>这里的内容会频繁更新吗？</summary>
+        <p>不会刻意追求日更或周更。内容会围绕与世界杯相关的背景、赛事脉络和值得留意的细节慢慢补充，更像一本不定期出版的专题手册。</p>
+      </details>
+      <details>
+        <summary>我怎么会再次想起来访问？</summary>
+        <p>如果你把页面加入书签或收藏夹，下次聊到世界杯、看到相关新闻，或者只是突然想翻翻绿茵场上的故事时，自然就会想起这里。</p>
+      </details>
+      <details>
+        <summary>这个页面和2026年有什么关系？</summary>
+        <p>名称包含2026，是为了对应下一届世界杯的年份，以此作为一个长期关注的锚点。但内容并不仅限于那一届，过往的经典、未来的趋势都在收录范围内。</p>
+      </details>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <span>关于</span>
+      <a href="https://chinaapp-fifa2026.com">世界杯</a>
+      <span> · 专题式记录 · 非官方 · 保持距离与热爱</span>
+    </footer>
+  </div>
+</body>
+</html>
